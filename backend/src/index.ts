@@ -51,7 +51,7 @@ app.get('/', (_req, res) => {
 
 // Health check endpoint
 app.get('/health', (_req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() })
+  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() })
 })
 
 // API Routes
@@ -61,18 +61,21 @@ app.use('/api', routes)
 app.use(errorHandler)
 
 // Start server
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server is running on port ${PORT}`)
   console.log(`📝 Environment: ${process.env.NODE_ENV || 'development'}`)
 })
 
-// Graceful shutdown (optional but useful)
-process.on('SIGINT', () => {
-  console.log('Received SIGINT — shutting down')
+// Graceful shutdown
+const gracefulShutdown = (signal: string) => {
+  console.log(`Received ${signal} — shutting down gracefully`)
   server.close(() => {
     console.log('Server closed')
     process.exit(0)
   })
-})
+}
+
+process.on('SIGINT', () => gracefulShutdown('SIGINT'))
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'))
 
 export default app
