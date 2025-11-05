@@ -1,5 +1,5 @@
 import apiClient from './client'
-import { Trip, Product, Recommendation } from '@/../shared/types'
+import { Trip, Product, Recommendation } from '@/lib/types'
 
 // Trip APIs
 export const tripApi = {
