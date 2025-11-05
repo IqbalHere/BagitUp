@@ -12,6 +12,8 @@ import { errorHandler } from './middleware/errorHandler'
 const app: Application = express()
 const PORT = Number(process.env.PORT) || 4000
 
+console.log(`🔍 PORT from env: ${process.env.PORT}, Using: ${PORT}`)
+
 // Connect to MongoDB (connectDB should handle its own errors)
 connectDB().catch(err => {
   console.error('❌ Failed to connect to DB on startup:', err)
