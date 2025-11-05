@@ -1,0 +1,71 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased bg-cream text-black;
+    font-family: 'Press Start 2P', monospace;
+  }
+}
+
+@layer utilities {
+  /* Simple scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-lightblue rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-coolseablue;
+  }
+
+  /* Animated Gradient Background */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+
+  /* Responsive Background Image Positioning */
+  @media (max-width: 768px) {
+    .hero-bg-mobile {
+      object-position: center center;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hero-bg-tablet {
+      object-position: center center;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .hero-bg-desktop {
+      object-position: center center;
+    }
+  }
+}

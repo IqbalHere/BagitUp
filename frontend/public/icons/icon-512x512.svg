@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#B8C84E" rx="64"/>
+  
+  <!-- Suitcase -->
+  <g transform="translate(130, 100)">
+    <!-- Main suitcase body -->
+    <rect x="45" y="100" width="170" height="140" rx="20" fill="#1A3A35" stroke="#1A3A35" stroke-width="8"/>
+    
+    <!-- Suitcase corners -->
+    <circle cx="60" cy="115" r="12" fill="#E8C547"/>
+    <circle cx="200" cy="115" r="12" fill="#E8C547"/>
+    <circle cx="60" cy="225" r="12" fill="#E8C547"/>
+    <circle cx="200" cy="225" r="12" fill="#E8C547"/>
+    
+    <!-- Handle -->
+    <path d="M 80 75 Q 130 30 180 75" stroke="#1A3A35" stroke-width="12" fill="none" stroke-linecap="round"/>
+    
+    <!-- Airplane icon -->
+    <g transform="translate(75, 130)">
+      <path d="M 25 40 L 60 10 L 100 25 L 100 42 L 60 32 L 25 58 Z" fill="#FFFFFF"/>
+      <path d="M 42 26 L 70 10 L 85 18 L 60 32 Z" fill="#E8E8E8"/>
+    </g>
+    
+    <!-- Diagonal line across -->
+    <line x1="25" y1="65" x2="235" y2="250" stroke="#1A3A35" stroke-width="15" stroke-linecap="round"/>
+  </g>
+</svg>

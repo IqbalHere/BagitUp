@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build
+
+# Backend build
+backend/dist/
+backend/build/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env*.local
+.env.development
+.env.production
+
+# Firebase
+backend/serviceAccountKey.json
+**/serviceAccountKey.json
+
+# Vercel
+.vercel
+
+# Docker
+docker-compose.override.yml
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
