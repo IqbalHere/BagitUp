@@ -4,8 +4,6 @@
   "description": "Full-stack Next.js application with MongoDB and Firebase",
   "private": true,
   "scripts": {
-    "check-firebase": "node check-firebase.js",
-    "setup-firebase": "node setup-firebase.js",
     "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "cd frontend && npm run dev",
     "dev:backend": "cd backend && npm run dev",
@@ -17,9 +15,5 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
-  },
-  "dependencies": {
-    "dotenv": "^17.2.3",
-    "groq-sdk": "^0.34.0"
   }
 }
