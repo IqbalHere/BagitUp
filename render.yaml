@@ -1,0 +1,31 @@
+# Render Blueprint for BagitUp
+# Documentation: https://render.com/docs/blueprint-spec
+
+services:
+  # Backend API Service
+  - type: web
+    name: BagitUp
+    runtime: node
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      # Add your other environment variables in Render Dashboard:
+      # - MONGODB_URI
+      # - FIREBASE_PROJECT_ID
+      # - FIREBASE_PRIVATE_KEY
+      # - FIREBASE_CLIENT_EMAIL
+      # - CORS_ORIGIN
+      # - GROQ_API_KEY
+      # - STRIPE_SECRET_KEY
+      # - STRIPE_WEBHOOK_SECRET
+      # - GEMINI_API_KEY
