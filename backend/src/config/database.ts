@@ -2,10 +2,10 @@ import mongoose from 'mongoose'
 
 const connectDB = async (): Promise<void> => {
   try {
-    const MONGO_URI = process.env.MONGO_URI
+    const MONGO_URI = process.env.MONGODB_URI || process.env.MONGO_URI
 
     if (!MONGO_URI) {
-      console.warn('⚠️  MONGO_URI is not defined in environment variables')
+      console.warn('⚠️  MONGODB_URI is not defined in environment variables')
       console.warn('   Database features will be disabled until configured')
       return
     }

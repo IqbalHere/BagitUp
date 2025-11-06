@@ -19,8 +19,10 @@ services:
         value: production
       - key: PORT
         value: 4000
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=460
       # Add your other environment variables in Render Dashboard:
-      # - MONGODB_URI
+      # - MONGODB_URI (use this name, not MONGO_URI)
       # - FIREBASE_PROJECT_ID
       # - FIREBASE_PRIVATE_KEY
       # - FIREBASE_CLIENT_EMAIL
