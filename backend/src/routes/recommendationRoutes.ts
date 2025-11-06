@@ -19,4 +19,7 @@ router.get('/trip/:tripId', recommendationController.getRecommendations)
 // DELETE /api/recommendations/trip/:tripId - Delete recommendations to force regeneration
 router.delete('/trip/:tripId', recommendationController.deleteRecommendations)
 
+// DELETE /api/recommendations/clear-all - Clear all cached recommendations for user
+router.delete('/clear-all', recommendationController.deleteAllUserRecommendations)
+
 export default router

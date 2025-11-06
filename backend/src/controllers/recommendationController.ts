@@ -10,6 +10,7 @@ export const recommendationController = {
   async getRecommendations(req: AuthRequest, res: Response, next: NextFunction) {
     try {
       const { tripId } = req.params
+      const { force } = req.query // Add force=true to bypass cache
       const userId = req.user?.uid
 
       if (!userId) {
@@ -30,17 +31,20 @@ export const recommendationController = {
         return res.status(404).json({ message: 'Trip not found' })
       }
 
-      // Check if we already have recommendations
-      const existingRec = await Recommendation.findOne({ tripId, userId })
-        .populate('products.productId')
+      // Check if we already have recommendations (unless force=true)
+      let existingRec = null
+      if (force !== 'true') {
+        existingRec = await Recommendation.findOne({ tripId, userId })
+          .populate('products.productId')
 
-      if (existingRec && existingRec.expiresAt && existingRec.expiresAt > new Date()) {
-        return res.json({
-          success: true,
-          fromCache: true,
-          recommendation: existingRec,
-          message: 'Using cached recommendations',
-        })
+        if (existingRec && existingRec.expiresAt && existingRec.expiresAt > new Date()) {
+          return res.json({
+            success: true,
+            fromCache: true,
+            recommendation: existingRec,
+            message: 'Using cached recommendations (add ?force=true to regenerate)',
+          })
+        }
       }
 
       // Generate new recommendations
@@ -219,6 +223,31 @@ export const recommendationController = {
       res.json({
         success: true,
         message: 'Recommendations deleted. Generate new ones with updated AI.',
+        deletedCount: result.deletedCount,
+      })
+    } catch (error) {
+      next(error)
+    }
+  },
+
+  // Delete all recommendations for all user trips
+  async deleteAllUserRecommendations(req: AuthRequest, res: Response, next: NextFunction) {
+    try {
+      const userId = req.user?.uid
+
+      if (!userId) {
+        return res.status(401).json({ message: 'User not authenticated' })
+      }
+
+      // Delete all recommendations for this user
+      const result = await Recommendation.deleteMany({ userId })
+
+      // Clear all trip recommendation references
+      await Trip.updateMany({ userId }, { recommendations: [] })
+
+      res.json({
+        success: true,
+        message: 'All cached recommendations cleared. Next trip generation will use fresh AI.',
         deletedCount: result.deletedCount,
       })
     } catch (error) {
