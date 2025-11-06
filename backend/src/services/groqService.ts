@@ -5,6 +5,14 @@ const groq = process.env.GROQ_API_KEY
   ? new Groq({ apiKey: process.env.GROQ_API_KEY })
   : null
 
+// Debug logging
+if (groq) {
+  console.log('✅ Groq SDK initialized with API key:', process.env.GROQ_API_KEY?.substring(0, 20) + '...')
+} else {
+  console.log('❌ Groq SDK NOT initialized - GROQ_API_KEY is missing!')
+  console.log('Available env vars:', Object.keys(process.env).filter(k => k.includes('GROQ')))
+}
+
 interface ChatMessage {
   role: 'system' | 'user' | 'assistant'
   content: string

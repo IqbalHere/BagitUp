@@ -4,11 +4,11 @@ import { verifyToken } from '../middleware/auth'
 
 const router = Router()
 
-// All routes require authentication
-router.use(verifyToken)
-
-// GET /api/recommendations/status - Check service status
+// GET /api/recommendations/status - Check service status (PUBLIC - no auth needed)
 router.get('/status', recommendationController.getServiceStatus)
+
+// All other routes require authentication
+router.use(verifyToken)
 
 // GET /api/recommendations - Get all user recommendations
 router.get('/', recommendationController.getUserRecommendations)
