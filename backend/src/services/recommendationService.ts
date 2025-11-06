@@ -1,8 +1,9 @@
+import { GroqService } from './groqService'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { Redis } from '@upstash/redis'
 import crypto from 'crypto'
 
-// Initialize Gemini AI
+// Initialize Gemini AI (fallback)
 const genAI = process.env.GEMINI_API_KEY
   ? new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
   : null
@@ -175,20 +176,53 @@ Focus on practical, commonly available products that a Gen-Z traveler would appr
   }
 
   /**
-   * Call Gemini API to generate recommendations
+   * Call AI API to generate recommendations (Groq preferred, Gemini fallback)
    */
-  private static async callGeminiAI(prompt: string): Promise<string> {
+  private static async callAI(prompt: string): Promise<string> {
     // Development mode bypass
     if (process.env.NODE_ENV === 'development' && process.env.USE_MOCK_RECOMMENDATIONS === 'true') {
-      console.log('🔧 Development mode: Using mock recommendations (Gemini bypassed)')
+      console.log('🔧 Development mode: Using mock recommendations (AI bypassed)')
       return this.generateMockRecommendations()
     }
 
-    if (!genAI) {
-      throw new Error('Gemini API is not configured. Please set GEMINI_API_KEY environment variable.')
+    // Try Groq first (faster and better)
+    if (GroqService.isAvailable()) {
+      console.log('🚀 Using Groq AI for recommendations...')
+      try {
+        const fullPrompt = `${prompt}
+
+Format your response as a JSON object with this exact structure:
+{
+  "items": [
+    {
+      "name": "Item name",
+      "reason": "Why you need it",
+      "priority": "essential|recommended|optional",
+      "category": "luggage|clothing|electronics|accessories|toiletries|outdoor-gear|travel-docs|health-safety|comfort|tech-gadgets|other"
+    }
+  ]
+}
+
+Focus on practical, commonly available products that a Gen-Z traveler would appreciate. Include 15-25 items total.`
+
+        const response = await GroqService.generateRecommendations(fullPrompt)
+        console.log('✅ Groq AI response received')
+        
+        // Parse and re-stringify to ensure consistency
+        const parsed = JSON.parse(response)
+        return JSON.stringify(parsed.items || parsed)
+      } catch (error) {
+        console.error('⚠️ Groq AI failed, falling back to Gemini:', error)
+        // Fall through to Gemini
+      }
     }
 
-    console.log('🤖 Calling Google Gemini AI for recommendations...')
+    // Fallback to Gemini if Groq is not available or failed
+    if (!genAI) {
+      throw new Error('No AI service is configured. Please set GROQ_API_KEY or GEMINI_API_KEY environment variable.')
+    }
+
+    console.log('🤖 Using Google Gemini AI for recommendations (fallback)...')
 
     // Use Gemini 2.0 Flash Experimental for recommendations (latest and fastest)
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' })
@@ -228,8 +262,8 @@ ${prompt}`
     // Build prompt
     const prompt = this.buildPrompt(tripDetails)
 
-    // Call Gemini AI
-    const aiResponse = await this.callGeminiAI(prompt)
+    // Call AI (Groq or Gemini)
+    const aiResponse = await this.callAI(prompt)
 
     // Cache the result
     await this.storeInCache(cacheKey, aiResponse)
@@ -280,8 +314,9 @@ ${prompt}`
   /**
    * Check if services are available
    */
-  public static isAvailable(): { gemini: boolean; redis: boolean } {
+  public static isAvailable(): { groq: boolean; gemini: boolean; redis: boolean } {
     return {
+      groq: GroqService.isAvailable(),
       gemini: !!genAI,
       redis: !!redis,
     }

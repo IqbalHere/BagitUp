@@ -17,10 +17,10 @@ export const recommendationController = {
       }
 
       // Check service availability
-      const { gemini, redis } = RecommendationService.isAvailable()
-      if (!gemini) {
+      const { groq, gemini, redis } = RecommendationService.isAvailable()
+      if (!groq && !gemini) {
         return res.status(503).json({
-          message: 'AI recommendation service is not available. Please configure GEMINI_API_KEY.',
+          message: 'AI recommendation service is not available. Please configure GROQ_API_KEY or GEMINI_API_KEY.',
         })
       }
 
@@ -167,14 +167,20 @@ export const recommendationController = {
   // Check service status
   async getServiceStatus(req: AuthRequest, res: Response, next: NextFunction) {
     try {
-      const { gemini, redis } = RecommendationService.isAvailable()
+      const { groq, gemini, redis } = RecommendationService.isAvailable()
 
       res.json({
         success: true,
         services: {
+          groq: {
+            available: groq,
+            status: groq ? 'configured' : 'not configured',
+            preferred: true,
+          },
           gemini: {
             available: gemini,
-            status: gemini ? 'configured' : 'not configured',
+            status: gemini ? 'configured (fallback)' : 'not configured',
+            preferred: false,
           },
           redis: {
             available: redis,
