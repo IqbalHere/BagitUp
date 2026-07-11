@@ -1,4 +1,5 @@
-# 🎒 BagItUp - AI-Powered Travel Planning Platform# 🌍 BagItUp - Gen-Z Travel Platform
+# 🎒 BagItUp - AI-Powered Travel Planning Platform
+# 🌍 BagItUp - Gen-Z Travel Platform
 
 
 
