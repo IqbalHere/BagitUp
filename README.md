@@ -1,615 +1,324 @@
-# 🎒 BagItUp - AI-Powered Travel Planning Platform
-# 🌍 BagItUp - Gen-Z Travel Platform
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,50:A855F7,100:EC4899&height=220&section=header&text=BagItUp&fontSize=50&fontColor=FFFFFF&fontAlignY=35&desc=AI-Powered%20Travel%20Planning%20Platform&descSize=20&descAlignY=55&animation=fadeIn" width="100%" />
 
+  <br />
 
+  <div align="center">
+    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+    <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+    <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+    <img src="https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe" />
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+    <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
+    <img src="https://img.shields.io/badge/Node-%3E%3D18.0.0-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js Version" />
+  </div>
 
-<div align="center">AI-powered packing recommendations and trip planning for the modern traveler.
+  <br />
 
+  <p align="center">
+    <strong>Plan smarter, pack lighter, and travel better with our Gen-Z AI-powered travel companion.</strong>
+  </p>
 
+  <br />
 
-![BagItUp](https://img.shields.io/badge/BagItUp-Travel%20Smarter-0066FF?style=for-the-badge)![Status](https://img.shields.io/badge/Status-90%25%20Complete-brightgreen)
+  <h3>🚀 <a href="#-quick-start">Quick Start</a> • 📖 <a href="#-api-reference">Docs</a> • 🔧 <a href="#-configuration">Config</a> • 🤝 <a href="#-contributing">Contributing</a></h3>
+</div>
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)![Frontend](https://img.shields.io/badge/Frontend-Next.js%2014-black)
-
-![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=for-the-badge&logo=typescript)![Backend](https://img.shields.io/badge/Backend-Express%20%2B%20TypeScript-blue)
-
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?style=for-the-badge&logo=mongodb)![AI](https://img.shields.io/badge/AI-GPT--4o-purple)
-
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+<br />
 
 ## ✨ Features
 
-**Plan smarter, pack lighter, travel better** ✈️
-
-- 🤖 **AI-Powered Recommendations** - GPT-4o analyzes your trip and suggests personalized packing lists
-
-[Features](#-features) • [Quick Start](#-quick-start) • [Tech Stack](#-tech-stack) • [Documentation](#-documentation) • [Contributing](#-contributing)- 🗺️ **Smart Trip Planning** - Multi-step form for creating detailed travel plans
-
-- 🛍️ **Curated Product Catalog** - Browse 20+ handpicked travel products with affiliate links
-
-</div>- 🌓 **Dark Mode** - Beautiful light/dark themes with smooth transitions
-
-- 📱 **Progressive Web App** - Install on your device, works offline
-
----- ⚡ **Lightning Fast** - Redis caching for instant AI responses
-
-- 🎨 **Gen-Z Design** - Vibrant colors, glassmorphism, smooth animations
-
-## 🌟 About
-
-## 🎨 Design System
-
-BagItUp is a modern, AI-powered travel planning platform designed for the Gen-Z traveler. It combines intelligent trip planning with personalized packing recommendations, helping you prepare for your adventures with ease.
-
-### Colors
-
-### ✨ Key Highlights- **Electric Blue** (#0066FF) - Primary brand color
-
-- **Tangerine Orange** (#FF9100) - Accent/CTA color
-
-- 🤖 **AI-Powered Recommendations** - Get personalized packing lists based on your destination, weather, and activities- **Mint Green** (#00FFC3) - Secondary accent
-
-- 🗺️ **Smart Trip Planning** - Intuitive multi-step trip creation with real-time validation- **Lavender** (#8B5CF6) - Tertiary accent
-
-- 🛍️ **Curated Product Marketplace** - Browse handpicked travel essentials with direct purchase links
-
-- 🌓 **Dark Mode Support** - Beautiful themes for any lighting condition### Typography
-
-- 📱 **Progressive Web App** - Install on any device, works offline- **Font:** Poppins (weights 300-800)
-
-- ⚡ **Lightning Fast** - Redis caching for instant AI responses
-
-- 🔒 **Secure Authentication** - Firebase-based user authentication## � Quick Start
-
-- 💳 **Payment Integration** - Stripe-ready for future monetization
-
-### Prerequisites
-
----- Node.js 18+ and npm
-
-- MongoDB Atlas account
-
-## 🚀 Features- OpenAI API key (optional)
-
-- Upstash Redis account (optional)
-
-### For Travelers
-
-### Installation
-
-- **Trip Dashboard**: Manage all your trips in one place
-
-- **AI Packing Assistant**: Get customized packing lists powered by Groq AI```bash
-
-- **Weather Integration**: Automatic weather-based recommendations# Install all dependencies
-
-- **Activity Planning**: Organize your trip activities and itinerarynpm install
-
-- **Product Discovery**: Browse curated travel gear and essentials
-
-- **Offline Support**: Access your trips even without internet# Or install separately:
-
-cd frontend && npm install
-
-### For Developerscd ../backend && npm install
-
-```
-
-- **TypeScript**: Full type safety across frontend and backend
-
-- **Modern Stack**: Next.js 14, Express, MongoDB, Redis### Environment Setup
-
-- **Docker Ready**: Complete containerization setup
-
-- **CI/CD Pipeline**: GitHub Actions workflow included**Backend** (`backend/.env`):
-
-- **Scalable Architecture**: Microservices-ready design```properties
-
-- **Comprehensive API**: RESTful endpoints with validationPORT=4000
-
-NODE_ENV=development
-
----MONGO_URI=your_mongodb_connection_string
-
-FIREBASE_SERVICE_ACCOUNT={...}
-
-## 🏗️ Tech StackOPENAI_API_KEY=sk-...
-
-UPSTASH_REDIS_REST_URL=https://...
-
-### FrontendUPSTASH_REDIS_REST_TOKEN=...
-
-- **Framework**: Next.js 14 (App Router)STRIPE_SECRET_KEY=sk_test_...
-
-- **Language**: TypeScriptUSE_STRIPE=false
-
-- **Styling**: Tailwind CSS```
-
-- **Animation**: Framer Motion, AOS
-
-- **State Management**: React Context API**Frontend** (`frontend/.env.local`):
-
-- **Authentication**: Firebase Auth```properties
-
-- **HTTP Client**: AxiosNEXT_PUBLIC_API_URL=http://localhost:4000
-
-- **UI Components**: Radix UI, HeroiconsNEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-
-```
-
-### Backend
-
-- **Runtime**: Node.js### Start Development
-
-- **Framework**: Express.js
-
-- **Language**: TypeScript```bash
-
-- **Database**: MongoDB (Mongoose ODM)# Run both servers concurrently
-
-- **Authentication**: Firebase Admin SDKnpm run dev
-
-- **AI Integration**: Groq SDK, Google Gemini AI
-
-- **Caching**: Upstash Redis# Or run separately:
-
-- **Payment**: Stripecd backend && npm run dev  # Port 4000
-
-- **Security**: Helmet, CORScd frontend && npm run dev # Port 3001
-
-```
-
-### DevOps
-
-- **Containerization**: Docker & Docker Compose### Seed Database
-
-- **CI/CD**: GitHub Actions
-
-- **Deployment**: Vercel-ready```bash
-
-- **Version Control**: Gitcd backend
-
-npx ts-node scripts/seedProducts.ts
-
----```
-
-
-
-## 📦 Quick Start## 📱 Usage
-
-
-
-### Prerequisites1. **Create Trip:** Navigate to My Trips → Plan New Trip
-
-2. **Get AI Recommendations:** Fill out trip details and generate packing list
-
-Before you begin, ensure you have the following installed:3. **Browse Products:** Filter and search travel gear
-
-- **Node.js** 18+ and npm4. **Toggle Dark Mode:** Click sun/moon icon in navbar
-
-- **MongoDB** (Atlas account recommended)5. **Install PWA:** Click install prompt in browser
-
-- **Git**
+<table>
+  <tbody>
+    <tr>
+      <td width="5%" align="center">🤖</td>
+      <td><strong>AI-Powered Recommendations</strong><br/>GPT-4o analyzes your trip and suggests highly personalized packing lists and travel recommendations.</td>
+    </tr>
+    <tr>
+      <td width="5%" align="center">🗺️</td>
+      <td><strong>Smart Trip Planning</strong><br/>Multi-step intuitive form for creating detailed travel plans, organizing itineraries, and managing trips.</td>
+    </tr>
+    <tr>
+      <td width="5%" align="center">🛍️</td>
+      <td><strong>Curated Product Catalog</strong><br/>Browse 20+ handpicked travel products with direct affiliate links to essential gear.</td>
+    </tr>
+    <tr>
+      <td width="5%" align="center">📱</td>
+      <td><strong>Progressive Web App</strong><br/>Install BagItUp directly on your device with offline support for accessing plans anywhere.</td>
+    </tr>
+    <tr>
+      <td width="5%" align="center">⚡</td>
+      <td><strong>Lightning Fast</strong><br/>Powered by Upstash Redis caching for instant AI responses and highly optimized load times.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 🏗️ Architecture
 
-Optional for full functionality:
-
-- Groq API key (for AI recommendations)### Frontend
-
-- Upstash Redis account (for caching)- Next.js 14 (App Router)
-
-- Firebase project (for authentication)- Tailwind CSS + Custom Gen-Z palette
-
-- Stripe account (for payments)- Framer Motion + AOS animations
-
-- Radix UI components
-
-### Installation- next-pwa for PWA functionality
-
-
-
-1. **Clone the repository**### Backend
-
-   ```bash- Express + TypeScript
-
-   git clone https://github.com/IqbalHere/BagitUp.git- MongoDB with Mongoose
-
-   cd BagitUp- Firebase Admin SDK (JWT auth)
-
-   ```- OpenAI GPT-4o integration
-
-- Upstash Redis caching
-
-2. **Install dependencies**- Stripe payment processing
-
-   ```bash
-
-   # Install root dependencies## �️ API Endpoints
-
-   npm install
-
-   ### Trips
-
-   # Install frontend dependencies- `GET /api/trips` - List all user trips
-
-   cd frontend- `GET /api/trips/:id` - Get trip details
-
-   npm install- `POST /api/trips` - Create trip
-
-   - `PUT /api/trips/:id` - Update trip
-
-   # Install backend dependencies- `DELETE /api/trips/:id` - Delete trip
-
-   cd ../backend
-
-   npm install### Products
-
-   cd ..- `GET /api/products` - List products (with filters)
-
-   ```- `GET /api/products/:id` - Get product details
-
-
-
-3. **Environment Configuration**### Recommendations
-
-- `GET /api/recommendations/:tripId` - Get trip recommendations
-
-   Create `.env` files in both frontend and backend directories:- `POST /api/recommendations/:tripId` - Generate new recommendations
-
-
-
-   **Backend** (`backend/.env`):## � Project Status
-
-   ```env
-
-   PORT=4000### ✅ Complete (90%)
-
-   NODE_ENV=development- Backend infrastructure (models, controllers, routes)
-
-   MONGO_URI=your_mongodb_connection_string- Frontend infrastructure (styling, themes, animations)
-
-   - Homepage with Gen-Z design
-
-   # Firebase Admin (JSON string)- Trip planning (list, create, details)
-
-   FIREBASE_SERVICE_ACCOUNT={"type":"service_account","project_id":"..."}- Product browsing with filters
-
-   - Dark mode system
-
-   # AI Services (at least one required)- PWA configuration
-
-   GROQ_API_KEY=your_groq_api_key- AI recommendation engine
-
-   GEMINI_API_KEY=your_gemini_api_key- Sample product data
-
-   
-
-   # Redis (optional, for caching)### 🚧 Pending (10%)
-
-   UPSTASH_REDIS_REST_URL=https://your-redis-url.upstash.io- Lottie animations
-
-   UPSTASH_REDIS_REST_TOKEN=your_redis_token- Stripe checkout (frontend)
-
-   - API keys configuration
-
-   # Stripe (optional)- MongoDB IP whitelisting
-
-   STRIPE_SECRET_KEY=sk_test_...- End-to-end testing
-
-   USE_STRIPE=false
-
-   ```## 📚 Documentation
-
-
-
-   **Frontend** (`frontend/.env.local`):- **Implementation Summary:** `IMPLEMENTATION_SUMMARY.md`
-
-   ```env- **Product Requirements:** `PRD.txt`
-
-   NEXT_PUBLIC_API_URL=http://localhost:4000- **API Docs:** http://localhost:4000/api
-
-   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-
-   ## 🚢 Deployment
-
-   # Firebase Config
-
-   NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key### Vercel (Frontend)
-
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-app.firebaseapp.com```bash
-
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-idcd frontend
-
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-app.appspot.comvercel --prod
-
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789```
-
-   NEXT_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abcdef
-
-   ```### Railway/Heroku (Backend)
+```mermaid
+graph LR
+    User([👤 User]) -->|HTTP/REST| FE[💻 Next.js Frontend]
+    FE -->|API Calls| BE[⚙️ Express Backend]
+    BE -->|Read/Write| DB[(🍃 MongoDB)]
+    BE -->|Auth Verification| FB[🔐 Firebase Auth]
+    BE -->|AI Generation| AI[🧠 OpenAI/Groq]
+    BE -->|Cache| Redis[(⚡ Upstash Redis)]
+
+    style User fill:#A855F7,stroke:#333,stroke-width:2px,color:#fff
+    style FE fill:#6C63FF,stroke:#333,stroke-width:2px,color:#fff
+    style BE fill:#10B981,stroke:#333,stroke-width:2px,color:#fff
+    style DB fill:#F59E0B,stroke:#333,stroke-width:2px,color:#fff
+    style FB fill:#EF4444,stroke:#333,stroke-width:2px,color:#fff
+    style AI fill:#6C63FF,stroke:#333,stroke-width:2px,color:#fff
+    style Redis fill:#EF4444,stroke:#333,stroke-width:2px,color:#fff
+```
+
+## 📦 Prerequisites
+
+Ensure you have the following installed before proceeding:
+
+| Requirement | Badge |
+| :--- | :--- |
+| **Node.js** | <img src="https://img.shields.io/badge/Node.js_18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" height="28" /> |
+| **npm** | <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" height="28" /> |
+| **Git** | <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" height="28" /> |
+| **Docker** (Optional) | <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" height="28" /> |
+| **MongoDB** | <img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" height="28" /> |
+
+## 🚀 Quick Start
+
+### 1️⃣ Clone the repository
 
 ```bash
+git clone https://github.com/IqbalHere/BagitUp.git
+cd BagitUp
+```
 
-4. **Seed the Database** (Optional)cd backend
+### 2️⃣ Install dependencies
 
-   ```bashnpm run build
-
-   cd backend# Deploy to platform
-
-   npx ts-node scripts/seedProducts.ts```
-
-   cd ..
-
-   ```## 🤝 Contributing
-
-
-
-5. **Start Development Servers**Future enhancements:
-
-- User onboarding flow
-
-   **Option 1: Run both servers concurrently**- Trip sharing
-
-   ```bash- Social features
-
-   npm run dev- Budget tracking
-
-   ```- Weather integration
-
-- Calendar sync
-
-   **Option 2: Run separately**
-
-   ```bash## � License
-
-   # Terminal 1 - Backend
-
-   cd backendPrivate project. All rights reserved.
-
-   npm run dev
-
-   ---
-
-   # Terminal 2 - Frontend
-
-   cd frontendBuilt with ❤️ for Gen-Z travelers. Pack smart, travel better! ✈️🌍
-
-   npm run dev
-   ```
-
-6. **Access the Application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:4000
-
----
-
-## 🐳 Docker Deployment
-
-Run the entire stack with Docker:
+<details>
+<summary>💻 macOS/Linux & Windows</summary>
 
 ```bash
-# Build and start all services
-npm run docker:up
+# Install root dependencies
+npm install
 
-# Stop all services
-npm run docker:down
-```
-
-Services will be available at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:4000
-- MongoDB: localhost:27017
-
----
-
-## 📁 Project Structure
-
-```
-BagitUp/
-├── frontend/                 # Next.js frontend application
-│   ├── app/                 # Next.js 14 app directory
-│   │   ├── api/            # API routes
-│   │   ├── auth/           # Authentication pages
-│   │   ├── dashboard/      # Dashboard pages
-│   │   ├── trip/           # Trip detail page
-│   │   └── loading-trip/   # Loading states
-│   ├── components/         # React components
-│   │   └── ui/            # Reusable UI components
-│   ├── lib/               # Utilities and configurations
-│   │   ├── api/           # API client and services
-│   │   ├── context/       # React context providers
-│   │   └── firebase/      # Firebase configuration
-│   └── public/            # Static assets
-│
-├── backend/                 # Express backend application
-│   ├── src/
-│   │   ├── config/        # Database and Firebase setup
-│   │   ├── controllers/   # Route controllers
-│   │   ├── middleware/    # Express middleware
-│   │   ├── models/        # Mongoose models
-│   │   ├── routes/        # API routes
-│   │   └── services/      # Business logic and AI services
-│   └── scripts/           # Utility scripts
-│
-├── shared/                  # Shared TypeScript types
-├── .github/                # GitHub Actions workflows
-└── docker-compose.yml      # Docker configuration
-```
-
----
-
-## 🎨 Design System
-
-### Color Palette
-
-- **Primary**: Electric Blue `#0066FF`
-- **Accent**: Tangerine Orange `#FF9100`
-- **Secondary**: Mint Green `#00FFC3`
-- **Tertiary**: Lavender `#8B5CF6`
-
-### Typography
-
-- **Font Family**: Poppins
-- **Weights**: 300 (Light), 400 (Regular), 600 (Semibold), 700 (Bold), 800 (Extrabold)
-
-### Design Principles
-
-- **Glassmorphism**: Frosted glass effects for modern UI
-- **Smooth Animations**: Framer Motion for delightful interactions
-- **Responsive**: Mobile-first design approach
-- **Accessible**: WCAG 2.1 AA compliant
-
----
-
-## 🔌 API Documentation
-
-### Base URL
-```
-http://localhost:4000/api
-```
-
-### Main Endpoints
-
-#### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `POST /api/auth/logout` - Logout user
-
-#### Trips
-- `GET /api/trips` - Get user's trips
-- `POST /api/trips` - Create new trip
-- `GET /api/trips/:id` - Get trip details
-- `PUT /api/trips/:id` - Update trip
-- `DELETE /api/trips/:id` - Delete trip
-
-#### Recommendations
-- `POST /api/recommendations/generate` - Generate AI packing list
-- `GET /api/recommendations/:tripId` - Get trip recommendations
-
-#### Products
-- `GET /api/products` - Get all products
-- `GET /api/products/:id` - Get product details
-- `GET /api/products/category/:category` - Get products by category
-
-#### Gear
-- `POST /api/gear/recommendations` - Get gear recommendations
-- `GET /api/gear/categories` - Get gear categories
-
----
-
-## 🧪 Testing
-
-```bash
-# Frontend tests
+# Install frontend dependencies
 cd frontend
-npm run test
+npm install
 
-# Backend tests
+# Install backend dependencies
+cd ../backend
+npm install
+cd ..
+```
+</details>
+
+### 3️⃣ Configure Environment
+
+Create `.env` and `.env.local` files by referencing the [Configuration](#-configuration) section below.
+
+### 4️⃣ Seed Database (Optional)
+
+```bash
 cd backend
-npm run test
-
-# Linting
-npm run lint
+npx ts-node scripts/seedProducts.ts
+cd ..
 ```
 
----
+### 5️⃣ Run the Application
 
-## 🚢 Deployment
+<details>
+<summary>🏃 Using Concurrently (Recommended)</summary>
 
-### Vercel (Frontend)
+```bash
+npm run dev
+```
 
-1. Import your repository to Vercel
-2. Configure environment variables
-3. Deploy with default settings
+</details>
 
-### Railway/Render (Backend)
+<details>
+<summary>🐳 Using Docker</summary>
 
-1. Connect your GitHub repository
-2. Set environment variables
-3. Configure build command: `cd backend && npm run build`
-4. Set start command: `cd backend && npm start`
+```bash
+npm run docker:up
+```
 
-### MongoDB Atlas
+</details>
 
-1. Create a cluster at [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
-2. Whitelist your deployment IPs
-3. Copy connection string to `MONGO_URI`
+## 🔧 Configuration
 
----
+> [!NOTE]
+> Make sure to grab your API keys from OpenAI/Groq, MongoDB Atlas, and Firebase Console before starting the backend server.
+
+**Backend (`backend/.env`)**
+
+| Variable | Required | Description |
+| :--- | :---: | :--- |
+| `PORT` | ✅ | Backend API port (default: 4000) |
+| `NODE_ENV` | ✅ | `development` or `production` |
+| `MONGO_URI` | ✅ | Connection string for MongoDB database |
+| `FIREBASE_SERVICE_ACCOUNT` | ✅ | JSON string of Firebase service account key |
+| `GROQ_API_KEY` | ❌ | Groq API Key for AI inference (One of AI keys required) |
+| `GEMINI_API_KEY` | ❌ | Gemini API Key for AI inference |
+| `OPENAI_API_KEY` | ❌ | OpenAI API Key for AI inference |
+| `UPSTASH_REDIS_REST_URL` | ❌ | Upstash Redis connection URL |
+| `UPSTASH_REDIS_REST_TOKEN` | ❌ | Upstash Redis auth token |
+| `STRIPE_SECRET_KEY` | ❌ | Stripe secret key for payments |
+| `USE_STRIPE` | ❌ | Set to `true` to enable Stripe integration |
+
+**Frontend (`frontend/.env.local`)**
+
+| Variable | Required | Description |
+| :--- | :---: | :--- |
+| `NEXT_PUBLIC_API_URL` | ✅ | Backend API URL (default: http://localhost:4000) |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | ❌ | Stripe publishable key |
+| `NEXT_PUBLIC_FIREBASE_API_KEY` | ✅ | Firebase project API key |
+| `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN` | ✅ | Firebase Auth domain |
+| `NEXT_PUBLIC_FIREBASE_PROJECT_ID` | ✅ | Firebase Project ID |
+| `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET` | ✅ | Firebase Storage bucket |
+| `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`| ✅ | Firebase Messaging Sender ID |
+| `NEXT_PUBLIC_FIREBASE_APP_ID` | ✅ | Firebase App ID |
+
+## 📖 API Reference
+
+### Generate Recommendations
+`POST /api/recommendations/generate`
+
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :---: | :---: | :--- |
+| `tripId` | string | ✅ | - | The ID of the trip |
+| `destination` | string | ✅ | - | Travel destination |
+| `duration` | number | ✅ | - | Length of the trip in days |
+| `weather` | string | ❌ | - | Weather forecast string |
+
+**Example Response:**
+
+```json
+{
+  "success": true,
+  "data": {
+    "recommendations": [
+      {
+        "category": "Clothing",
+        "items": [
+          "3x T-Shirts",
+          "1x Light Jacket",
+          "2x Shorts"
+        ]
+      },
+      {
+        "category": "Electronics",
+        "items": [
+          "Universal Power Adapter",
+          "Power Bank"
+        ]
+      }
+    ]
+  }
+}
+```
+
+## 🛡️ Error Handling
+
+| Scenario | Behavior |
+| :--- | :--- |
+| 🚫 **Invalid API Key** | Backend returns `401 Unauthorized` with clear message |
+| 🌐 **Network Timeout** | Frontend shows gracefully animated toast notification |
+| 📉 **AI Generation Fail** | Fallback to cached default lists if Redis is enabled |
+| 🛠️ **Missing Env Vars** | Server fails to boot and logs exactly which variable is missing |
+
+## 🧰 Development
+
+### Commands
+
+```bash
+# Run both frontend & backend concurrently
+npm run dev
+
+# Run frontend tests
+cd frontend && npm run test
+
+# Run backend tests
+cd backend && npm run test
+
+# Lint the codebase
+cd frontend && npm run lint
+cd backend && npm run lint
+```
+
+### Project Structure
+
+```text
+📁 BagitUp/
+├── 📁 frontend/                 # Next.js Application
+│   ├── 📁 app/                 # App router structure
+│   ├── 📁 components/          # Reusable UI elements
+│   └── 📁 lib/                 # Utils & API integrations
+├── 📁 backend/                  # Express API Server
+│   ├── 📁 src/                 # Source code
+│   │   ├── 📁 config/         # DB & Firebase configs
+│   │   ├── 📁 controllers/    # Route controllers
+│   │   ├── 📁 models/         # Mongoose models
+│   │   └── 📁 routes/         # Express routes
+│   └── 📁 scripts/             # Database seeders
+├── 📁 shared/                   # Shared TypeScript types
+├── ⚙️ docker-compose.yml       # Docker config
+└── 📄 package.json              # Workspace setup
+```
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Component | Technology | Role |
+| :---: | :--- | :--- |
+| **Frontend** | <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" height="28" /> | App routing, server-side rendering, and UI |
+| **Styling** | <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" height="28" /> | Utility-first responsive styling and UI |
+| **Backend** | <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" height="28" /> | RESTful API server and routing |
+| **Database** | <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" height="28" /> | NoSQL data persistence |
+| **Auth** | <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" height="28" /> | Secure user authentication and management |
+| **AI** | <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" height="28" /> | Intelligent recommendation engine |
+| **Caching** | <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" height="28" /> | Fast data retrieval via Upstash |
+| **Payments** | <img src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white" height="28" /> | Monetization and payment processing |
+
+</div>
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+We welcome contributions! Please follow these steps to contribute:
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Write clean, documented code
-- Follow TypeScript best practices
-- Add tests for new features
-- Update documentation as needed
-- Follow conventional commit messages
-
----
+1. **Fork** the repository
+2. **Create a branch** for your feature (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request** against the `main` branch
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) - React framework
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Groq](https://groq.com/) - AI inference
-- [Firebase](https://firebase.google.com/) - Authentication
-- [Stripe](https://stripe.com/) - Payment processing
-- [Upstash](https://upstash.com/) - Redis caching
-- [Vercel](https://vercel.com/) - Hosting platform
-
----
-
-## 📧 Contact
-
-**Project Maintainer**: Iqbal
-
-- GitHub: [@IqbalHere](https://github.com/IqbalHere)
-- Repository: [BagItUp](https://github.com/IqbalHere/BagitUp)
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Social features (trip sharing, following travelers)
-- [ ] Collaborative trip planning
-- [ ] Mobile app (React Native)
-- [ ] Multi-language support
-- [ ] Advanced analytics dashboard
-- [ ] Integration with booking platforms
-- [ ] Community marketplace for travel tips
-
----
+<br />
 
 <div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,50:A855F7,100:EC4899&height=120&section=footer&animation=fadeIn" width="100%" />
 
-**Made with ❤️ for travelers around the world**
+  <br />
 
-⭐ Star this repo if you find it helpful!
+  <p>Built with ❤️ by <a href="https://github.com/IqbalHere">Iqbal</a></p>
 
+  <br />
+
+  <img src="https://img.shields.io/github/stars/IqbalHere/BagitUp?style=social" alt="GitHub stars" />
+  <img src="https://img.shields.io/github/forks/IqbalHere/BagitUp?style=social" alt="GitHub forks" />
+  <img src="https://img.shields.io/github/issues/IqbalHere/BagitUp?style=social" alt="GitHub issues" />
+
+  <br />
+  <br />
+
+  <strong>⭐ Star this repo if you found it useful! ⭐</strong>
 </div>
